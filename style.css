@@ -75,20 +75,23 @@ textarea{
   
 }
 
-#hourlabel{
+#hourLabel{
   margin: 10px;
   width: 10%;
+  padding: 10px;
   
 }
 
 .inputText{
-  margin: 10px;
+  margin: 0px;
   width: 80%;
+  padding: 20px;
+  background-color: #77dd77;
 
 }
 
 .saveBtn{
   margin: 10px;
   width: 10%;
-  
+
 }
