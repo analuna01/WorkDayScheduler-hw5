@@ -5,7 +5,7 @@ function scheduleTime() {
     scheduleDate.html(date);
 
 }
-function hourList() {
+function scheduleFormat() {
     var containerDiv = $(".container");
 
     for (let i = 9; i <= 17; i++) {
@@ -44,16 +44,17 @@ function saveStorage(index, textValue) {
 
 //Prints information from local storage
 function displayStorage() {
-    var todosArray2 = JSON.parse(localStorage.getItem("todos"));
-    for (let i = 0; i < 9; i++) {
-        var inputTextId = ("txt" + i);
-        //$(inputTextId).val(todosArray2[i]);
-        var inputText= document.getElementById(inputTextId);
-        inputText.nodeValue = "ana";
+    if (JSON.parse(localStorage.getItem("todos"))){
+        var todosArray2 = JSON.parse(localStorage.getItem("todos"));
+        for (let i = 9; i <= 17; i++) {
+          var inputTextId = ("#txt" + i);
+          $(inputTextId).val(todosArray2[i-9]);
+        }
+      }
+    
     }
-
-}
-
+      
+    
 //every element with this class will call this function using jQuery
 $(document).ready(function () {
     $(".saveBtn").click(function (event) {
@@ -69,6 +70,6 @@ $(document).ready(function () {
 });
 
 scheduleTime();
-hourList();
+scheduleFormat();
 
 
