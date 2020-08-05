@@ -50,7 +50,7 @@ function displayStorage() {
           var inputTextId = ("#txt" + i);
           $(inputTextId).val(todosArray2[i-9]);
         }
-      }
+    }
     
     }
       
